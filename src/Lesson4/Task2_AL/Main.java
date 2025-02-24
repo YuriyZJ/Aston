@@ -1,11 +1,10 @@
-package Lesson4.Task2;
+package Lesson4.Task2_AL;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        RealizationArrayList<String> arrayList1 = new RealizationArrayList<>();
+        RealizationLinkedList<String> arrayList1 = new RealizationLinkedList<>();
 
         arrayList1.add("Java");
         arrayList1.add("Python");

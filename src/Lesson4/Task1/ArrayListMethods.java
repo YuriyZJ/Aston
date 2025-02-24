@@ -1,11 +1,12 @@
 package Lesson4.Task1;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ArrayListMethods {
     public static void main(String[] args) {
-    List<String> arrayList1 = new ArrayList();
+    List<String> arrayList1 = new LinkedList<>();
 
     arrayList1.add("Java");
     arrayList1.add("Python");

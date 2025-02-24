@@ -1,13 +1,13 @@
-package Lesson4.Task2;
+package Lesson4.Task2_AL;
 
 import java.util.Arrays;
 import java.util.Collection;
 
-public class RealizationArrayList<T> {
+public class RealizationLinkedList<T> {
     private Object[] elements;
     private int size;
 
-    public RealizationArrayList() {
+    public RealizationLinkedList() {
         elements = new Object[10]; // Стартовый размер массива
         size = 0;
     }
@@ -40,7 +40,10 @@ public class RealizationArrayList<T> {
 
     // Сортировка пузырьком с флагом (только для Comparable)
     public void bubbleSort() {
-        if (size <= 1) return;
+        if (size <= 1) {
+            return;
+        }
+
         boolean swapped;
         for (int i = 0; i < size - 1; i++) {
             swapped = false;
