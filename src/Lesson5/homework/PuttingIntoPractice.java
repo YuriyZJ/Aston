@@ -1,9 +1,6 @@
 package  Lesson5.homework;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class PuttingIntoPractice {
@@ -30,31 +27,55 @@ public class PuttingIntoPractice {
                 .collect(Collectors.toList());
 
         //2. Вывести список неповторяющихся городов, в которых работают трейдеры.
-        List<String> citiesTraiders = transactions.stream()
+        Set<String> citiesTraders = transactions.stream()
                 .map(city -> city.getTrader().getCity())
-                .collect(Collectors.toList());
+                .collect(Collectors.toSet());
 
         //3. Найти всех трейдеров из Кембриджа и отсортировать их по именам.
-        List<Trader> traiders = transactions.stream()
+        List<Trader> traders = transactions.stream()
                 .map(transaction -> transaction.getTrader())
                 .filter(trader -> trader.getCity().equals("Cambridge"))
-                .distinct()
+                .distinct() // возвращает только уникальные данные
                 .sorted(Comparator.comparing(Trader::getName))
                 .collect(Collectors.toList());
 
         //4. Вернуть строку со всеми именами трейдеров, отсортированными в алфавитном порядке.
+        String sortTraders = transactions.stream()
+                .map(transaction -> transaction.getTrader().getName())
+                .distinct()
+                .sorted()
+                .collect(Collectors.joining(","));
+
         //5. Выяснить, существует ли хоть один трейдер из Милана.
+        boolean traderFromMilan = transactions.stream()
+                .anyMatch(t -> t.getTrader().getCity().equals("Milan"));
+
+
         //6. Вывести суммы всех транзакций трейдеров из Кембриджа.
+        int getSumTransactionCambridge = transactions.stream()
+                .filter(trader -> trader.getTrader().getCity().equals("Cambridge"))
+                .mapToInt(transaction -> transaction.getValue())
+                .sum();
 
 
         //7. Какова максимальная сумма среди всех транзакций?
-        Optional<Transaction> transactionMax = transactions.stream()
-                .max(Comparator.comparing(transaction1 -> transaction1.getValue()));
+        int maxTransactionValue = transactions.stream()
+                .mapToInt(transaction1 -> transaction1.getValue())
+                .max()
+                .orElse(0);
 
         //8. Найти транзакцию с минимальной суммой.
         Optional<Transaction> transactionMin = transactions.stream()
                 .min(Comparator.comparing(transaction -> transaction.getValue()));
 
-
+        // Вывод результатов
+        System.out.println("Транзакции 2011 года: " + transactions2011);
+        System.out.println("Города трейдеров: " + citiesTraders);
+        System.out.println("Трейдеры из Кембриджа: " + traders);
+        System.out.println("Все имена трейдеров: " + sortTraders);
+        System.out.println("Есть ли трейдеры из Милана? " + traderFromMilan);
+        System.out.println("Сумма транзакций трейдеров из Кембриджа: " + getSumTransactionCambridge);
+        System.out.println("Максимальная сумма транзакции: " +maxTransactionValue );
+        transactionMin.ifPresent(t -> System.out.println("Транзакция с минимальной суммой: " + t));
     }
 }
