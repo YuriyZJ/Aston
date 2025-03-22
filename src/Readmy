@@ -1,7 +1,16 @@
-public class Main {
-}
+Программа курса Ступень I:
+1. Какие языки программирования бывают.  JVM, JRE, JDK.  Области памяти в java.  Классы и объекты. Class Loaders. Виды, для чего нужны. Объект класса Class.
+2. Абстрактные классы и интерфейсы.  Изменяемые и неизменяемые объекты.  Inner и Nested классы. Локальные и анонимные классы
+3. Класс Object.  Принципы ООП.  Оболочки примитивных типов. Основное API. Особенности сравнения значений.  String.
+4. Алгоритмы.  Generics.  Коллекции.
+5. Лямбда выражения, функциональные интерфейсы, Stream API.
+6. Исключения.  Ввод - вывод. Сериализация.
+7. Многопоточность.  Пакет java.util.concurrent.
+8. Сборщики проектов(Gradle, Maven). Git.
+9. SOLID.  Паттерны проектирования.
+10. Web. Servlets, Apache Tomcat.
 
-    /*Занятие 1
+    Занятие 1
 1. Какие языки программирования бывают.
 2. JVM, JRE, JDK
 3. Области памяти в java
@@ -89,9 +98,11 @@ public class Main {
 1.1. Этапы сборки в Maven
 1.2. Где на локальной машине хранятся скачанные зависимости
 2. Git
-push, pull, fetch
-2 варианта слияния веток(merge, rebase)
-cherry pick, squash patch, stash reset, revert
+2.1 push, pull, fetch
+2.2 варианта слияния веток (merge, rebase)
+2.3 cherry pick, squash
+2.5 patch, stash
+2.6 reset, revert
 
     Занятие 9
 1. SOLID
@@ -104,5 +115,3 @@ cherry pick, squash patch, stash reset, revert
 1.3. Протокол НТТР
 1.4. REST
 2. Servlets, Apache Tomcat
-
-     */
