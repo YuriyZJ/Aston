@@ -1,0 +1,31 @@
+Модуль 1. Git. Алгоритмы и структуры данных
+Модуль 2. SQL. Hibernate. JPA
+СУБД, Нормальная форма (знать 3 формы), ACID, Isolation +-, JDBC PreparedStatment, SQL. Hibernate. JPA, требования к Entuty, типы связей, Кэш, Проблема 1
+Модуль 3. Тестирование. JUnit & Mockito. SOLID
+Модуль 4. Spring
+Модуль 5. JMS: RabbitMq, Kafka, ActiveMQ
+Модуль 6. HTTP, WEB, REST, SOAP
+Модуль 7. Паттерны микросервисной архитектуры
+
+Программа Java-интенсива
+- Алгоритмы и структуры данных
+- Git
+- SOLID - Code review
+- Типы данных
+- Исключения
+- ACID
+- Isolations
+- JDBC
+- HTTP / WEB
+- SOAP
+- JUNIT
+- MOCKITO
+- POSTMAN
+- Formats
+- Bean life circle
+- Spring Boot
+- Spring Framework (MVC обзор)
+- Spring Data
+- Spring Security
+- JMM
+- JMS: RabbitMq, Kafka, ActiveMQ
