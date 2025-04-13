@@ -3,8 +3,9 @@ package Stage2_070425_060625.Homework2.model;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+//Хранение данных пользователя
 @Entity //помечает класс как сущность БД. Он должен иметь конструктор безаргументов и быть открытым для наследования или наследоваться от другого класса.
-@Table(name = "users") //задает имя таблицы (по умолчанию совпадает с именем класса)
+@Table(name = "usersAston") //задает имя таблицы (по умолчанию совпадает с именем класса)
 public class User {
 
     @Id // первичный ключ
@@ -15,15 +16,17 @@ public class User {
     private String email;
     private int age;
 
-    @Column(name = "created_at")
+    @Column(name = "created_at") //задает имя колонки
     private LocalDateTime createdDate = LocalDateTime.now();
 
-    public User(int id, String name, String email, int age, LocalDateTime createdDate) {
+    public User() { }
+
+    public User(int id, String name, String email, int age) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.age = age;
-        this.createdDate = createdDate;
+        this.createdDate = LocalDateTime.now();
     }
 
     public int getId() {

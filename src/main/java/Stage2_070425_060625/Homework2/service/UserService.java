@@ -2,57 +2,40 @@ package Stage2_070425_060625.Homework2.service;
 
 import Stage2_070425_060625.Homework2.dao.UserDAO;
 import Stage2_070425_060625.Homework2.model.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.sql.SQLException;
 import java.util.List;
 
+//Отвечает за логику работы с пользователями, для взаимодействия между Main и UserDAO, абстрагирует вызовы к UserDAO
 public class UserService {
     private final UserDAO userDAO = new UserDAO();
-
-    public void createTable(String tableName, String columns) {
-        try {
-            userDAO.createTable(tableName, columns);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+    private static final Logger logger = LogManager.getLogger(UserService.class);
 
     public void addUser(User user) {
-        try{
-           userDAO.addUser(user);
-            System.out.println("User added successfully" + user.getName());
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
+        logger.info("Attempt to add a user: {}", user.getName());
+        userDAO.addUser(user);
+        logger.info("User added successfully: {}", user.getName());
     }
 
     public void listAllUsers() {
-        try {
-            List<User> listAllUsers = userDAO.getAllUsers();
-            System.out.println("List:");
-            for (User user : listAllUsers) {
-                System.out.println(user.getName() + " " + user.getEmail() + " " + user.getAge() + " " + user.getCreatedDate());
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        logger.info("A list of all users has been requested");
+        List<User> listAllUsers = userDAO.getAllUsers();
+        logger.info("Получено {} пользователей", listAllUsers.size());
+        for (User user : listAllUsers) {
+            System.out.println(user.getName() + " " + user.getEmail() + " " + user.getAge() + " " + user.getCreatedDate());
         }
     }
 
     public void updateUsers(User user) {
-        try{
-            userDAO.updateUser(user);
-            System.out.println("User updated successfully" + user.getName());
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
+        logger.info("Attempt to update a user: {}", user.getName());
+        userDAO.updateUser(user);
+        logger.info("User updated successfully: {}", user.getName());
     }
 
     public void deleteUser(int id) {
-        try{
-            userDAO.deleteUser(id);
-            System.out.println("User deleted successfully" + id);
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
+        logger.info("Attempt to delete a user: {}", id);
+        userDAO.deleteUser(id);
+        logger.info("User deleted successfully: {}", id);
     }
 }

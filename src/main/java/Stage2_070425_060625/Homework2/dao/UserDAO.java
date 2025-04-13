@@ -1,26 +1,79 @@
 package Stage2_070425_060625.Homework2.dao;
 
-import Stage2_070425_060625.Homework2.config.DatabaseConfig;
 import Stage2_070425_060625.Homework2.model.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
-import java.sql.*;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+//Отвечает за выполнение SQL-запросов (этот слой изолирует логику работы с БД от остального кода.)
 public class UserDAO {
-    public void createTable(String tableName, String columns) throws SQLException {
-        String sql = "CREATE TABLE " + tableName + " (" + columns + ")";
-        try (Connection conn = DatabaseConfig.getDataSource().getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+    private final SessionFactory sessionFactory;
+    private static final Logger logger = LogManager.getLogger(UserDAO.class);
 
-            pstmt.executeUpdate();
-            System.out.println("Таблица '" + tableName + "' создана успешно!");
-        } catch (SQLException e) {
-            System.out.println("Ошибка при создании таблицы: " + e.getMessage());
+    public UserDAO() {
+        this.sessionFactory = new Configuration().configure().buildSessionFactory();
+    }
+
+    public void addUser(User user) {
+        Transaction transaction = null;
+        try (Session session = sessionFactory.openSession()) {
+            transaction = session.beginTransaction();
+            session.save(user);
+            transaction.commit();
+            logger.info("User added successfully: {}", user.getName());
+        } catch (Exception e) {
+            if (transaction != null) transaction.rollback();
+            logger.error("Error when adding a user: " + e.getMessage(), e);
         }
     }
 
-    public void addUser(User user) throws SQLException {
+    public List<User> getAllUsers() {
+        try (Session session = sessionFactory.openSession()) {
+            List<User> users = session.createQuery("from User", User.class).list();
+            logger.info("Получено {} пользователей из базы данных", users.size());
+            return users;
+        } catch (Exception e) {
+            logger.error("Ошибка при получении всех пользователей: " + e.getMessage(), e);
+            return Collections.emptyList();
+        }
+    }
+
+    public void updateUser(User user) {
+        Transaction transaction = null;
+        try (Session session = sessionFactory.openSession()) {
+            transaction = session.beginTransaction();
+            session.merge(user);
+            transaction.commit();
+            logger.info("User updated successfully: {}", user.getName());
+        } catch (Exception e) {
+            if (transaction != null) transaction.rollback();
+            logger.error("Error when updating a user: " + e.getMessage(), e);
+        }
+    }
+
+    public void deleteUser(int id) {
+        Transaction transaction = null;
+        try (Session session = sessionFactory.openSession()) {
+            transaction = session.beginTransaction();
+            User user = session.get(User.class, id);
+            if (user != null) session.remove(user);
+            transaction.commit();
+            logger.info("User deleted successfully: {}", user.getName());
+        } catch (Exception e) {
+            if (transaction != null) transaction.rollback();
+            e.printStackTrace();
+            logger.error("Error when deleting a user: " + e.getMessage(), e);
+        }
+    }
+
+/*      // через JDBC
+        public void addUser(User user) throws SQLException {
         String sql = "INSERT INTO users (id, name, email, age, createdDate) VALUES (?,?,?,?,?)";
         try (Connection conn = DatabaseConfig.getDataSource().getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -75,5 +128,5 @@ public class UserDAO {
             ps.setInt(1, id);
             ps.executeUpdate();
         }
-    }
+    }*/
 }
