@@ -42,6 +42,9 @@ public class Main {
                     userService.listAllUsers();
                 }
                 case 3 -> {
+                    System.out.print("ID пользователя для обновления: ");
+                    int id = scanner.nextInt();
+                    scanner.nextLine();
                     System.out.print("Новое имя: ");
                     String name = scanner.nextLine();
                     System.out.print("Новый email: ");
@@ -50,6 +53,7 @@ public class Main {
                     int age = scanner.nextInt();
 
                     User user = new User();
+                    user.setId(id);
                     user.setName(name);
                     user.setEmail(email);
                     user.setAge(age);
@@ -82,9 +86,9 @@ public class Main {
         // создаю таблицу
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите имя новой таблицы: usersAston");
+        System.out.println("Введите имя новой таблицы (например: usersAston):");
         String tableName = scanner.nextLine();
-        System.out.println("Введите структуру колонок (например: id INT PRIMARY KEY, name VARCHAR(100), email VARCHAR(100), age INT, createdDate TIMESTAMP)");
+        System.out.println("Введите структуру колонок (например: id INT PRIMARY KEY, name VARCHAR(100), email VARCHAR(100), age INT, createdDate TIMESTAMP): ");
         String columns = scanner.nextLine();
         scanner.close();
 

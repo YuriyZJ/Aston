@@ -1,0 +1,241 @@
+[2025-04-13 23:07:43] [INFO ] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[2025-04-13 23:07:44] [INFO ] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2025-04-13 23:07:44] [WARN ] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2025-04-13 23:07:44] [INFO ] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/my_database]
+[2025-04-13 23:07:44] [INFO ] pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+[2025-04-13 23:07:44] [INFO ] pooling - HHH10001003: Autocommit mode: false
+[2025-04-13 23:07:44] [INFO ] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[2025-04-13 23:07:44] [INFO ] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2025-04-13 23:07:44] [INFO ] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3f362135] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2025-04-13 23:07:44] [INFO ] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2025-04-13 23:08:46] [INFO ] UserService - Attempt to add a user: David
+[2025-04-13 23:08:46] [INFO ] UserDAO - User added successfully: David
+[2025-04-13 23:08:46] [INFO ] UserService - User added successfully: David
+[2025-04-13 23:09:42] [INFO ] UserService - Attempt to add a user: Kate
+[2025-04-13 23:09:42] [INFO ] UserDAO - User added successfully: Kate
+[2025-04-13 23:09:42] [INFO ] UserService - User added successfully: Kate
+[2025-04-13 23:09:45] [INFO ] UserService - A list of all users has been requested
+[2025-04-13 23:09:45] [INFO ] UserDAO - Получено 2 пользователей из базы данных
+[2025-04-13 23:09:45] [INFO ] UserService - Получено 2 пользователей
+[2025-04-13 23:10:16] [INFO ] UserService - Attempt to delete a user: 1
+[2025-04-13 23:10:16] [INFO ] UserDAO - User deleted successfully: David
+[2025-04-13 23:10:16] [INFO ] UserService - User deleted successfully: 1
+[2025-04-13 23:10:23] [INFO ] UserService - A list of all users has been requested
+[2025-04-13 23:10:23] [INFO ] UserDAO - Получено 1 пользователей из базы данных
+[2025-04-13 23:10:23] [INFO ] UserService - Получено 1 пользователей
+[2025-04-13 23:11:00] [INFO ] UserService - Attempt to update a user: Kate
+[2025-04-13 23:11:01] [INFO ] UserDAO - User updated successfully: Kate
+[2025-04-13 23:11:01] [INFO ] UserService - User updated successfully: Kate
+[2025-04-13 23:11:15] [INFO ] UserService - A list of all users has been requested
+[2025-04-13 23:11:15] [INFO ] UserDAO - Получено 2 пользователей из базы данных
+[2025-04-13 23:11:15] [INFO ] UserService - Получено 2 пользователей
+[2025-04-14 13:32:27] [INFO ] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[2025-04-14 13:32:28] [INFO ] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2025-04-14 13:32:28] [WARN ] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2025-04-14 13:32:28] [INFO ] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/my_database]
+[2025-04-14 13:32:28] [INFO ] pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+[2025-04-14 13:32:28] [INFO ] pooling - HHH10001003: Autocommit mode: false
+[2025-04-14 13:32:28] [INFO ] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[2025-04-14 13:32:28] [INFO ] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2025-04-14 13:32:28] [INFO ] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@724aefc3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2025-04-14 13:32:28] [INFO ] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2025-04-14 13:32:55] [INFO ] UserService - Attempt to add a user: Mask
+[2025-04-14 13:32:55] [INFO ] UserDAO - User added successfully: Mask
+[2025-04-14 13:32:55] [INFO ] UserService - User added successfully: Mask
+[2025-04-14 13:32:57] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:32:57] [INFO ] UserDAO - Получено 3 пользователей из базы данных
+[2025-04-14 13:32:57] [INFO ] UserService - Получено 3 пользователей
+[2025-04-14 13:34:15] [INFO ] UserService - Attempt to update a user: Kate
+[2025-04-14 13:34:15] [INFO ] UserDAO - User updated successfully: Kate
+[2025-04-14 13:34:15] [INFO ] UserService - User updated successfully: Kate
+[2025-04-14 13:34:18] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:34:18] [INFO ] UserDAO - Получено 4 пользователей из базы данных
+[2025-04-14 13:34:18] [INFO ] UserService - Получено 4 пользователей
+[2025-04-14 13:34:50] [INFO ] UserService - Attempt to delete a user: 5
+[2025-04-14 13:34:50] [INFO ] UserDAO - User deleted successfully: Kate
+[2025-04-14 13:34:50] [INFO ] UserService - User deleted successfully: 5
+[2025-04-14 13:35:00] [INFO ] UserService - Attempt to delete a user: 3
+[2025-04-14 13:35:00] [INFO ] UserDAO - User deleted successfully: Kate
+[2025-04-14 13:35:00] [INFO ] UserService - User deleted successfully: 3
+[2025-04-14 13:35:04] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:35:04] [INFO ] UserDAO - Получено 2 пользователей из базы данных
+[2025-04-14 13:35:04] [INFO ] UserService - Получено 2 пользователей
+[2025-04-14 13:38:09] [INFO ] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[2025-04-14 13:38:10] [INFO ] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2025-04-14 13:38:10] [WARN ] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2025-04-14 13:38:10] [INFO ] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/my_database]
+[2025-04-14 13:38:10] [INFO ] pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+[2025-04-14 13:38:10] [INFO ] pooling - HHH10001003: Autocommit mode: false
+[2025-04-14 13:38:10] [INFO ] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[2025-04-14 13:38:10] [INFO ] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2025-04-14 13:38:10] [INFO ] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@235d659c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2025-04-14 13:38:10] [INFO ] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2025-04-14 13:38:42] [INFO ] UserService - Attempt to add a user: David
+[2025-04-14 13:38:42] [WARN ] SqlExceptionHelper - SQL Error: 0, SQLState: 42P01
+[2025-04-14 13:38:42] [ERROR] SqlExceptionHelper - ERROR: relation "usersaston" does not exist
+  Position: 13
+[2025-04-14 13:42:06] [INFO ] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[2025-04-14 13:42:06] [INFO ] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2025-04-14 13:42:06] [WARN ] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2025-04-14 13:42:06] [INFO ] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/my_database]
+[2025-04-14 13:42:06] [INFO ] pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+[2025-04-14 13:42:06] [INFO ] pooling - HHH10001003: Autocommit mode: false
+[2025-04-14 13:42:06] [INFO ] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[2025-04-14 13:42:06] [INFO ] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2025-04-14 13:42:06] [INFO ] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@76a14c8d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2025-04-14 13:42:07] [INFO ] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2025-04-14 13:42:28] [INFO ] UserService - Attempt to add a user: David
+[2025-04-14 13:42:28] [INFO ] UserDAO - User added successfully: David
+[2025-04-14 13:42:28] [INFO ] UserService - User added successfully: David
+[2025-04-14 13:42:28] [INFO ] UserService - Attempt to add a user: Ibrahim
+[2025-04-14 13:42:28] [INFO ] UserDAO - User added successfully: Ibrahim
+[2025-04-14 13:42:28] [INFO ] UserService - User added successfully: Ibrahim
+[2025-04-14 13:42:28] [INFO ] UserService - Attempt to add a user: Kate
+[2025-04-14 13:42:28] [INFO ] UserDAO - User added successfully: Kate
+[2025-04-14 13:42:28] [INFO ] UserService - User added successfully: Kate
+[2025-04-14 13:42:28] [INFO ] UserService - Attempt to add a user: Mask
+[2025-04-14 13:42:28] [INFO ] UserDAO - User added successfully: Mask
+[2025-04-14 13:42:28] [INFO ] UserService - User added successfully: Mask
+[2025-04-14 13:42:28] [INFO ] UserService - Attempt to add a user: Tramp
+[2025-04-14 13:42:28] [INFO ] UserDAO - User added successfully: Tramp
+[2025-04-14 13:42:28] [INFO ] UserService - User added successfully: Tramp
+[2025-04-14 13:42:28] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:42:28] [INFO ] UserDAO - Получено 5 пользователей из базы данных
+[2025-04-14 13:42:28] [INFO ] UserService - Получено 5 пользователей
+[2025-04-14 13:42:28] [INFO ] UserService - Attempt to update a user: Ivan Update
+[2025-04-14 13:42:28] [INFO ] UserDAO - User updated successfully: Ivan Update
+[2025-04-14 13:42:28] [INFO ] UserService - User updated successfully: Ivan Update
+[2025-04-14 13:42:28] [INFO ] UserService - Attempt to delete a user: 4
+[2025-04-14 13:42:28] [INFO ] UserDAO - User deleted successfully: Mask
+[2025-04-14 13:42:28] [INFO ] UserService - User deleted successfully: 4
+[2025-04-14 13:42:28] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:42:28] [INFO ] UserDAO - Получено 4 пользователей из базы данных
+[2025-04-14 13:42:28] [INFO ] UserService - Получено 4 пользователей
+[2025-04-14 13:43:38] [INFO ] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[2025-04-14 13:43:39] [INFO ] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2025-04-14 13:43:39] [WARN ] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2025-04-14 13:43:39] [INFO ] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/my_database]
+[2025-04-14 13:43:39] [INFO ] pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+[2025-04-14 13:43:39] [INFO ] pooling - HHH10001003: Autocommit mode: false
+[2025-04-14 13:43:39] [INFO ] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[2025-04-14 13:43:39] [INFO ] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2025-04-14 13:43:39] [INFO ] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@724aefc3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2025-04-14 13:43:39] [INFO ] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2025-04-14 13:43:56] [INFO ] UserService - Attempt to delete a user: 3
+[2025-04-14 13:43:56] [INFO ] UserDAO - User deleted successfully: Kate
+[2025-04-14 13:43:56] [INFO ] UserService - User deleted successfully: 3
+[2025-04-14 13:44:03] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:44:03] [INFO ] UserDAO - Получено 3 пользователей из базы данных
+[2025-04-14 13:44:03] [INFO ] UserService - Получено 3 пользователей
+[2025-04-14 13:44:41] [INFO ] UserService - Attempt to add a user: Ibrahim
+[2025-04-14 13:44:41] [INFO ] UserDAO - User added successfully: Ibrahim
+[2025-04-14 13:44:41] [INFO ] UserService - User added successfully: Ibrahim
+[2025-04-14 13:44:45] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:44:45] [INFO ] UserDAO - Получено 4 пользователей из базы данных
+[2025-04-14 13:44:45] [INFO ] UserService - Получено 4 пользователей
+[2025-04-14 13:45:45] [INFO ] UserService - Attempt to update a user: Ibrahim
+[2025-04-14 13:45:45] [INFO ] UserDAO - User updated successfully: Ibrahim
+[2025-04-14 13:45:45] [INFO ] UserService - User updated successfully: Ibrahim
+[2025-04-14 13:45:47] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:45:47] [INFO ] UserDAO - Получено 4 пользователей из базы данных
+[2025-04-14 13:45:47] [INFO ] UserService - Получено 4 пользователей
+[2025-04-14 13:46:22] [INFO ] UserService - Attempt to update a user: Ibrahim
+[2025-04-14 13:46:22] [INFO ] UserDAO - User updated successfully: Ibrahim
+[2025-04-14 13:46:22] [INFO ] UserService - User updated successfully: Ibrahim
+[2025-04-14 13:46:29] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:46:29] [INFO ] UserDAO - Получено 4 пользователей из базы данных
+[2025-04-14 13:46:29] [INFO ] UserService - Получено 4 пользователей
+[2025-04-14 13:53:36] [INFO ] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[2025-04-14 13:53:36] [INFO ] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2025-04-14 13:53:36] [WARN ] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2025-04-14 13:53:36] [INFO ] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/my_database]
+[2025-04-14 13:53:36] [INFO ] pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+[2025-04-14 13:53:36] [INFO ] pooling - HHH10001003: Autocommit mode: false
+[2025-04-14 13:53:36] [INFO ] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[2025-04-14 13:53:36] [INFO ] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2025-04-14 13:53:36] [INFO ] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56928e17] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2025-04-14 13:53:36] [INFO ] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2025-04-14 13:55:56] [INFO ] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[2025-04-14 13:55:56] [INFO ] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2025-04-14 13:55:56] [WARN ] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2025-04-14 13:55:56] [INFO ] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/my_database]
+[2025-04-14 13:55:56] [INFO ] pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+[2025-04-14 13:55:56] [INFO ] pooling - HHH10001003: Autocommit mode: false
+[2025-04-14 13:55:56] [INFO ] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[2025-04-14 13:55:56] [INFO ] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2025-04-14 13:55:56] [INFO ] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@19e0dffe] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2025-04-14 13:55:56] [INFO ] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2025-04-14 13:56:28] [INFO ] UserService - Attempt to update a user: Ibrahim
+[2025-04-14 13:56:28] [INFO ] UserDAO - User updated successfully: Ibrahim
+[2025-04-14 13:56:28] [INFO ] UserService - User updated successfully: Ibrahim
+[2025-04-14 13:56:36] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:56:36] [INFO ] UserDAO - Получено 4 пользователей из базы данных
+[2025-04-14 13:56:36] [INFO ] UserService - Получено 4 пользователей
+[2025-04-14 13:57:06] [INFO ] UserService - Attempt to add a user: Mask
+[2025-04-14 13:57:06] [INFO ] UserDAO - User added successfully: Mask
+[2025-04-14 13:57:06] [INFO ] UserService - User added successfully: Mask
+[2025-04-14 13:57:09] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 13:57:09] [INFO ] UserDAO - Получено 5 пользователей из базы данных
+[2025-04-14 13:57:09] [INFO ] UserService - Получено 5 пользователей
+[2025-04-14 13:59:25] [INFO ] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[2025-04-14 13:59:25] [INFO ] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2025-04-14 13:59:25] [WARN ] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2025-04-14 13:59:25] [INFO ] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/my_database]
+[2025-04-14 13:59:25] [INFO ] pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+[2025-04-14 13:59:25] [INFO ] pooling - HHH10001003: Autocommit mode: false
+[2025-04-14 13:59:25] [INFO ] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[2025-04-14 13:59:25] [INFO ] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2025-04-14 13:59:26] [INFO ] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6bc24e72] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2025-04-14 13:59:26] [INFO ] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2025-04-14 14:00:35] [INFO ] UserService - Attempt to add a user: David
+[2025-04-14 14:00:35] [INFO ] UserDAO - User added successfully: David
+[2025-04-14 14:00:35] [INFO ] UserService - User added successfully: David
+[2025-04-14 14:00:35] [INFO ] UserService - Attempt to add a user: Ibrahim
+[2025-04-14 14:00:35] [INFO ] UserDAO - User added successfully: Ibrahim
+[2025-04-14 14:00:35] [INFO ] UserService - User added successfully: Ibrahim
+[2025-04-14 14:00:35] [INFO ] UserService - Attempt to add a user: Kate
+[2025-04-14 14:00:35] [INFO ] UserDAO - User added successfully: Kate
+[2025-04-14 14:00:35] [INFO ] UserService - User added successfully: Kate
+[2025-04-14 14:00:35] [INFO ] UserService - Attempt to add a user: Mask
+[2025-04-14 14:00:35] [INFO ] UserDAO - User added successfully: Mask
+[2025-04-14 14:00:35] [INFO ] UserService - User added successfully: Mask
+[2025-04-14 14:00:35] [INFO ] UserService - Attempt to add a user: Tramp
+[2025-04-14 14:00:35] [INFO ] UserDAO - User added successfully: Tramp
+[2025-04-14 14:00:35] [INFO ] UserService - User added successfully: Tramp
+[2025-04-14 14:00:35] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 14:00:35] [INFO ] UserDAO - Получено 5 пользователей из базы данных
+[2025-04-14 14:00:35] [INFO ] UserService - Получено 5 пользователей
+[2025-04-14 14:00:35] [INFO ] UserService - Attempt to update a user: Ivan Update
+[2025-04-14 14:00:35] [INFO ] UserDAO - User updated successfully: Ivan Update
+[2025-04-14 14:00:35] [INFO ] UserService - User updated successfully: Ivan Update
+[2025-04-14 14:00:35] [INFO ] UserService - Attempt to delete a user: 4
+[2025-04-14 14:00:35] [INFO ] UserDAO - User deleted successfully: Mask
+[2025-04-14 14:00:35] [INFO ] UserService - User deleted successfully: 4
+[2025-04-14 14:00:35] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 14:00:35] [INFO ] UserDAO - Получено 4 пользователей из базы данных
+[2025-04-14 14:00:35] [INFO ] UserService - Получено 4 пользователей
+[2025-04-14 14:20:26] [INFO ] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[2025-04-14 14:20:26] [INFO ] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2025-04-14 14:20:26] [WARN ] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2025-04-14 14:20:26] [INFO ] pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/my_database]
+[2025-04-14 14:20:26] [INFO ] pooling - HHH10001001: Connection properties: {user=postgres, password=****}
+[2025-04-14 14:20:26] [INFO ] pooling - HHH10001003: Autocommit mode: false
+[2025-04-14 14:20:26] [INFO ] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[2025-04-14 14:20:26] [INFO ] Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2025-04-14 14:20:27] [INFO ] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@751ae8a4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2025-04-14 14:20:27] [INFO ] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2025-04-14 14:20:34] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 14:20:35] [INFO ] UserDAO - Получено 4 пользователей из базы данных
+[2025-04-14 14:20:35] [INFO ] UserService - Получено 4 пользователей
+[2025-04-14 14:20:58] [INFO ] UserService - Attempt to update a user: 1
+[2025-04-14 14:20:58] [INFO ] UserDAO - User updated successfully: 1
+[2025-04-14 14:20:58] [INFO ] UserService - User updated successfully: 1
+[2025-04-14 14:21:02] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 14:21:02] [INFO ] UserDAO - Получено 4 пользователей из базы данных
+[2025-04-14 14:21:02] [INFO ] UserService - Получено 4 пользователей
+[2025-04-14 14:21:13] [INFO ] UserService - Attempt to delete a user: 1
+[2025-04-14 14:21:13] [INFO ] UserDAO - User deleted successfully: 1
+[2025-04-14 14:21:13] [INFO ] UserService - User deleted successfully: 1
+[2025-04-14 14:21:17] [INFO ] UserService - A list of all users has been requested
+[2025-04-14 14:21:17] [INFO ] UserDAO - Получено 3 пользователей из базы данных
+[2025-04-14 14:21:17] [INFO ] UserService - Получено 3 пользователей

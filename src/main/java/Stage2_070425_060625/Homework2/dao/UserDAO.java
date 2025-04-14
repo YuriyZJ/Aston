@@ -13,22 +13,22 @@ import java.util.List;
 
 //Отвечает за выполнение SQL-запросов (этот слой изолирует логику работы с БД от остального кода.)
 public class UserDAO {
-    private final SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory; //Создал фабрику сессий
     private static final Logger logger = LogManager.getLogger(UserDAO.class);
 
     public UserDAO() {
-        this.sessionFactory = new Configuration().configure().buildSessionFactory();
+        this.sessionFactory = new Configuration().configure().buildSessionFactory(); // создали текущую сессию
     }
 
     public void addUser(User user) {
         Transaction transaction = null;
-        try (Session session = sessionFactory.openSession()) {
-            transaction = session.beginTransaction();
-            session.save(user);
-            transaction.commit();
+        try (Session session = sessionFactory.openSession()) { //Открыл новую сессию Hibernate
+            transaction = session.beginTransaction(); //Начинаем транзакцию
+            session.save(user); // Добавили User
+            transaction.commit(); // Фиксируем транзакцию
             logger.info("User added successfully: {}", user.getName());
         } catch (Exception e) {
-            if (transaction != null) transaction.rollback();
+            if (transaction != null) transaction.rollback(); // Если произойдёт исключение — откатываем изменения
             logger.error("Error when adding a user: " + e.getMessage(), e);
         }
     }
@@ -44,13 +44,21 @@ public class UserDAO {
         }
     }
 
-    public void updateUser(User user) {
+    public void updateUser(User updatedUser) {
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            session.merge(user);
+
+            User existingUser = session.get(User.class, updatedUser.getId());
+            if (existingUser != null) {
+                existingUser.setName(updatedUser.getName());
+                existingUser.setEmail(updatedUser.getEmail());
+                existingUser.setAge(updatedUser.getAge());
+                existingUser.setCreatedDate(updatedUser.getCreatedDate());
+            }
+
             transaction.commit();
-            logger.info("User updated successfully: {}", user.getName());
+            logger.info("User updated successfully: {}", updatedUser.getName());
         } catch (Exception e) {
             if (transaction != null) transaction.rollback();
             logger.error("Error when updating a user: " + e.getMessage(), e);
