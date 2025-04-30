@@ -28,7 +28,7 @@ public class UserDAO {
             transaction.commit(); // Фиксируем транзакцию
             logger.info("User added successfully: {}", user.getName());
         } catch (Exception e) {
-            if (transaction != null) transaction.rollback(); // Если произойдёт исключение — откатываем изменения
+            if (transaction != null && transaction.isActive()) transaction.rollback(); // Если произойдёт исключение — откатываем изменения
             logger.error("Error when adding a user: " + e.getMessage(), e);
         }
     }

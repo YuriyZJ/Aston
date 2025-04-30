@@ -1,25 +1,46 @@
+<!--
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <!-- JDBC connection settings -->
+        &lt;!&ndash; JDBC connection settings &ndash;&gt;
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/my_database</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">Sql</property>
 
-        <!-- SQL dialect -->
+&lt;!&ndash;            <property name="hibernate.connection.url">${TEST_URL}</property>
+            <property name="hibernate.connection.username">${TEST_USERNAME}</property>
+            <property name="hibernate.connection.password">${TEST_PASSWORD}</property>&ndash;&gt;
+
+        &lt;!&ndash; SQL dialect &ndash;&gt;
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
-        <!-- Show SQL in console -->
+        &lt;!&ndash; Show SQL in console &ndash;&gt;
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
-        <!-- Auto schema generation -->
+        &lt;!&ndash; Auto schema generation &ndash;&gt;
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <!-- Mapping -->
+        &lt;!&ndash; Mapping &ndash;&gt;
+        <mapping class="Stage2_070425_060625.Homework2.model.User"/>
+    </session-factory>
+</hibernate-configuration>-->
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/my_database</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">Sql</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
         <mapping class="Stage2_070425_060625.Homework2.model.User"/>
     </session-factory>
 </hibernate-configuration>

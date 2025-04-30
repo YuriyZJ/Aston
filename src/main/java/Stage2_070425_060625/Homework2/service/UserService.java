@@ -9,8 +9,16 @@ import java.util.List;
 
 //Отвечает за логику работы с пользователями, для взаимодействия между Main и UserDAO, абстрагирует вызовы к UserDAO
 public class UserService {
-    private final UserDAO userDAO = new UserDAO();
+    private final UserDAO userDAO;
     private static final Logger logger = LogManager.getLogger(UserService.class);
+
+    public UserService() {
+        this.userDAO = new UserDAO();
+    }
+
+    public UserService(UserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
 
     public void addUser(User user) {
         logger.info("Attempt to add a user: {}", user.getName());
