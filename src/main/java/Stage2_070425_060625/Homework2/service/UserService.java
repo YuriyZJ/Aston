@@ -4,9 +4,11 @@ import Stage2_070425_060625.Homework2.dao.UserDAO;
 import Stage2_070425_060625.Homework2.model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 //Отвечает за логику работы с пользователями, для взаимодействия между Main и UserDAO, абстрагирует вызовы к UserDAO
 public class UserService {
     private final UserDAO userDAO;

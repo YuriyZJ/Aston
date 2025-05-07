@@ -1,8 +1,9 @@
 package Stage2_070425_060625.Homework4.controller;
 
+
 import Stage2_070425_060625.Homework4.dto.UserRequestDto;
 import Stage2_070425_060625.Homework4.dto.UserResponseDto;
-import Stage2_070425_060625.Homework4.server.UserService;
+import Stage2_070425_060625.Homework4.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +27,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.addUser(userRequestDto));
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public UserResponseDto updateUser(@PathVariable Integer id, @RequestBody UserRequestDto userRequestDto){
         return userService.updateUser(id, userRequestDto);
     }

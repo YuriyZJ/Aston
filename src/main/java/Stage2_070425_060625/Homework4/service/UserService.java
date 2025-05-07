@@ -1,4 +1,5 @@
-package Stage2_070425_060625.Homework4.server;
+package Stage2_070425_060625.Homework4.service;
+
 
 import Stage2_070425_060625.Homework4.dto.UserRequestDto;
 import Stage2_070425_060625.Homework4.dto.UserResponseDto;
@@ -9,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service

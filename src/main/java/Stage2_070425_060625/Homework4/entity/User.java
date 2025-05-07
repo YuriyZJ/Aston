@@ -1,19 +1,14 @@
 package Stage2_070425_060625.Homework4.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "usersAston2")
+@Table(name = "users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
