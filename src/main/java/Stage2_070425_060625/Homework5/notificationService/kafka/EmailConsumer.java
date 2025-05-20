@@ -1,6 +1,6 @@
 package Stage2_070425_060625.Homework5.notificationService.kafka;
 
-import Stage2_070425_060625.Homework5.notificationService.EmailEvent;
+import Stage2_070425_060625.Homework5.DTOKafka.EmailEvent;
 import Stage2_070425_060625.Homework5.notificationService.service.EmailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.annotation.KafkaListener;

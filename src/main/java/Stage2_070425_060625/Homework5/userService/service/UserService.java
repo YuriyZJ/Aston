@@ -1,12 +1,13 @@
 package Stage2_070425_060625.Homework5.userService.service;
 
 
+import Stage2_070425_060625.Homework5.DTOKafka.EmailEvent;
 import Stage2_070425_060625.Homework5.userService.dto.UserRequestDto;
 import Stage2_070425_060625.Homework5.userService.dto.UserResponseDto;
 import Stage2_070425_060625.Homework5.userService.entity.User;
-import Stage2_070425_060625.Homework5.userService.kafka.EmailEvent;
 import Stage2_070425_060625.Homework5.userService.kafka.KafkaProducerService;
 import Stage2_070425_060625.Homework5.userService.repository.UserRepository;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Data
 @Service
 @RequiredArgsConstructor
 public class UserService {

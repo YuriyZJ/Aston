@@ -1,5 +1,6 @@
 package Stage2_070425_060625.Homework5.userService.kafka;
 
+import Stage2_070425_060625.Homework5.DTOKafka.EmailEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;

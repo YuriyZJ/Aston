@@ -1,4 +1,4 @@
-package Stage2_070425_060625.Homework5.userService.kafka;
+package Stage2_070425_060625.Homework5.DTOKafka;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

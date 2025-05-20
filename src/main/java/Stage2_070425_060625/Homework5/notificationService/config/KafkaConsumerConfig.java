@@ -1,6 +1,6 @@
 package Stage2_070425_060625.Homework5.notificationService.config;
 
-import Stage2_070425_060625.Homework5.notificationService.EmailEvent;
+import Stage2_070425_060625.Homework5.DTOKafka.EmailEvent;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.context.annotation.Bean;
