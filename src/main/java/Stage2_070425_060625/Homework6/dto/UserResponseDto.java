@@ -1,7 +1,11 @@
 package Stage2_070425_060625.Homework6.dto;
 
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.time.LocalDateTime;
 
@@ -9,8 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor // Генерирует пустой конструктор без параметров
 @AllArgsConstructor // Генерирует конструктор со всеми полями в порядке их объявления
 @FieldDefaults(level = AccessLevel.PRIVATE) // по умолчанию все объявленные поля присваивает private модификатор
-@Builder
-public class UserResponseDto {
+public class UserResponseDto extends RepresentationModel<UserResponseDto> {
     Integer id;
     String name;
     String email;
