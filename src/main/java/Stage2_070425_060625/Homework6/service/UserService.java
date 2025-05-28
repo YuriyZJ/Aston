@@ -1,6 +1,7 @@
 package Stage2_070425_060625.Homework6.service;
 
 
+import Stage2_070425_060625.Homework6.controller.UserController;
 import Stage2_070425_060625.Homework6.dto.UserRequestDto;
 import Stage2_070425_060625.Homework6.dto.UserResponseDto;
 import Stage2_070425_060625.Homework6.entity.User;
@@ -11,6 +12,9 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @Service
 @RequiredArgsConstructor
@@ -46,7 +50,22 @@ public class UserService {
     }
 
     // Метод преобразует сущность User в UserResponseDto, чтобы отправить клиенту только нужные поля.
+    //Преобразует сущность User в DTO-объект для отправки клиенту.
+    //Добавляет навигационные ссылки по принципу HATEOAS — клиент может видеть, какие действия разрешены.
     private UserResponseDto toDto(User user) {
-        return new UserResponseDto(user.getId(), user.getName(), user.getEmail(), user.getAge(), user.getCreatedDate());
+        UserResponseDto userResponseDto = new UserResponseDto(
+                user.getId(),
+                user.getName(),
+                user.getEmail(),
+                user.getAge(),
+                user.getCreatedDate()
+        );
+
+        userResponseDto.add(linkTo(methodOn(UserController.class).listAllUsers()).withRel("all_users")); //linkTo(...) — строит ссылку на метод контроллера, methodOn(...).listAllUsers() — имитирует вызов метода listAllUsers(), чтобы HATEOAS смог узнать путь.  withRel("all_users") — добавляет ссылку под названием "all_users" (relationship name). И метод добавляет гиперссылку: "_links": { "all_users": { "href": "http://localhost:8080/api/users" } }
+        userResponseDto.add(linkTo(methodOn(UserController.class).addUser(null)).withRel("add_user")); //null здесь передаётся просто как заглушка — methodOn не вызывает реальный метод, а анализирует сигнатуру.
+        userResponseDto.add(linkTo(methodOn(UserController.class).updateUser(user.getId(), null)).withRel("update_user"));
+        userResponseDto.add(linkTo(methodOn(UserController.class).deleteUser(user.getId())).withRel("delete_user"));
+
+        return userResponseDto; //Возвращается DTO с встроенными ссылками _links.
     }
 }

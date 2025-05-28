@@ -1,4 +1,3 @@
-package Stage2_070425_060625.Homework6.config;/*
 package Stage2_070425_060625.Homework6.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
@@ -17,9 +16,10 @@ public class SwaggerConfig{
     public OpenAPI api(){
         return new OpenAPI()
                 .servers(List.of(
-                        new Server().url("http://localhost:8080")))
+                        new Server()
+                                .url("http://localhost:8080")
+                                .description("Local Development Server")))
                 .info(new Info()
-                        .title("hz"));
+                        .title("Task6_way1"));
     }
 }
-*/

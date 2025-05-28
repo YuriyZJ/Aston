@@ -3,7 +3,6 @@ package Stage2_070425_060625.Homework6.controller;
 
 import Stage2_070425_060625.Homework6.dto.UserRequestDto;
 import Stage2_070425_060625.Homework6.dto.UserResponseDto;
-import Stage2_070425_060625.Homework6.entity.User;
 import Stage2_070425_060625.Homework6.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -14,9 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
-
 @Tag(name = "main_methods")
 @RestController
 @RequestMapping("/api/users")
@@ -24,7 +20,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class UserController {
     private final UserService userService;
 
-    @Operation(
+    @Operation( //Описывает конкретный HTTP-метод (операцию)
             summary = "Get list all users",
             description = "Call method from userService"
     )
@@ -60,16 +56,5 @@ public class UserController {
     public ResponseEntity<Void> deleteUser(@PathVariable Integer id){
         userService.deleteUser(id);
         return ResponseEntity.noContent().build(); //возвращает 204 No Content, что правильно по REST-стандартам при удалении.
-    }
-
-    public UserResponseDto toDto(User user){
-        UserResponseDto userResponseDto = new UserResponseDto();
-
-        userResponseDto.add(linkTo(methodOn(UserController.class).listAllUsers()).withRel("all_users"));
-        userResponseDto.add(linkTo(methodOn(UserController.class).addUser(null)).withRel("add_user"));
-        userResponseDto.add(linkTo(methodOn(UserController.class).updateUser(user.getId(), null)).withRel("update_user"));
-        userResponseDto.add(linkTo(methodOn(UserController.class).deleteUser(user.getId())).withRel("delete_user"));
-
-        return userResponseDto;
     }
 }

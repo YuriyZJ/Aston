@@ -1,0 +1,6 @@
+Добавление Swagger-документации и HATEOAS в API.
+1. Задокументировать существующее API (из задания 4) с помощью Swagger (Springdoc OpenAPI), чтобы можно было легко изучить и тестировать API через веб-интерфейс.
+- Добавил OpenAPI (1 способ: отдельный пакет config (SwaggerConfig). 2 способ: добавления в Application аннотации (@OpenAPIDefinition) с командами)
+- В классе UserController к каждому методу добавил аннотацию @Operation с описанием функционала (в Swagger (http://localhost:8080/swagger-ui/index.html#/) появляется описание API Rest).
+2. Добавить поддержку HATEOAS, чтобы API предоставляло ссылки для навигации по ресурсам.
+- В классе UserService добавил метод toDTO
