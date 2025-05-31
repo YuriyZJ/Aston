@@ -1,45 +1,15 @@
-Добавить в user-service поддержку Spring и разработать API, которое позволит управлять данными.
+ Добавить в user-service поддержку Spring и разработать API, которое позволит управлять данными.
 
- 1. Использовать необходимые модули spring(boot, web, data etc).
-2. Реализовать api для получения, создания, обновления и удаления юзера. Важно, entity не должен возвращаться из контроллера, необходимо использовать dto.
-3. Заменить Hibernate на Spring data JPA.
-4. Написать тесты для API(можно делать это при помощи mockMvc или других средств)
+  1. Использовать необходимые модули spring(boot, web, data etc).
+ 2. Реализовать api для получения, создания, обновления и удаления юзера. Важно, entity не должен возвращаться из контроллера, необходимо использовать dto.
+ 3. Заменить Hibernate на Spring data JPA.
+ 4. Написать тесты для API(можно делать это при помощи mockMvc или других средств)
 
-Структора проекта
-com.example.userservice
-├── controller      // REST API
-├── dto             // DTO классы
-├── entity          // Сущности для JPA
-├── repository      // Интерфейсы Spring Data
-├── service         // Бизнес-логика
-└── exception       // Обработка ошибок
-
-1. Для чего в классе User эти поля?
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-И зачем нам эта аннотация @Column(name = "created_date"), а для других переменных name и тд мы не помечаем такой аннотацией
-
-2. Классы UserRequestDto и UserResponseDto, для чего эти классы, по простому опиши и какой он принцип выполняет и почему в них разное количество переменных объявлено?
-
-3. В классу UserRepository, по какой причине компилятор не видит User в пакете и ругается на него. И почему мы в JpaRepository<User, Integer> передаем именно такие дженерики (такого типа)?
-
-4. Что значат в application.properties эти поля?
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-logging.level.org.hibernate.SQL=debug
-
-5. В UserService что выполняет метод toDTO, для чего он
-И отсюда вытекает распиши что делает этот метод, каждую строку
-    public List<UserResponseDto> listAllUsers() {
-        return userRepository.findAll().stream()
-                .map(this::toDto)
-                .collect(Collectors.toList());
-    }
-
-И почему в методе createUser мы создаем объект с такими параметрами, мы же не создавали конструктор такого вида?
-
-И весь метод нужен
-6. Весь UserController
-
-
+ Структора проекта
+ com.example.userservice
+ ├── controller      // REST API
+ ├── dto             // DTO классы
+ ├── entity          // Сущности для JPA
+ ├── repository      // Интерфейсы Spring Data
+ ├── service         // Бизнес-логика
+ └── exception       // Обработка ошибок
