@@ -1,0 +1,7 @@
+/Volumes/Mak/IT/Java/Test2/notification-service/src/main/java/org/aston/homework5NS/config/KafkaConsumerConfig.java
+/Volumes/Mak/IT/Java/Test2/notification-service/src/main/java/org/aston/homework5NS/controller/EmailManualController.java
+/Volumes/Mak/IT/Java/Test2/notification-service/src/main/java/org/aston/homework5NS/service/EmailService.java
+/Volumes/Mak/IT/Java/Test2/notification-service/src/main/java/org/aston/homework5NS/ApplicationNS.java
+/Volumes/Mak/IT/Java/Test2/notification-service/src/main/java/org/aston/homework5NS/kafka/EmailConsumer.java
+/Volumes/Mak/IT/Java/Test2/notification-service/src/main/java/org/aston/homework5NS/config/JavaSenderConfig.java
+/Volumes/Mak/IT/Java/Test2/notification-service/src/main/java/org/aston/homework5NS/kafka/KafkaProducerService.java

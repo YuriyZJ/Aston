@@ -1,0 +1,8 @@
+org/aston/homework5US/repository/UserRepository.class
+org/aston/homework5US/service/UserService.class
+org/aston/homework5US/dto/UserRequestDto.class
+org/aston/homework5US/entity/User.class
+org/aston/homework5US/kafka/KafkaProducerService.class
+org/aston/homework5US/ApplicationUS.class
+org/aston/homework5US/dto/UserResponseDto.class
+org/aston/homework5US/controller/UserController.class
