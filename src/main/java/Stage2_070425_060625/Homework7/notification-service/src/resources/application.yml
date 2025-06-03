@@ -7,5 +7,10 @@ spring:
     config:
       uri: http://localhost:8888
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka
+
 server:
   port: 8081
