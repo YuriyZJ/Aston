@@ -20,5 +20,5 @@ spring:
       service-url:
         defaultZone: http://discovery-service:8761/eureka
 
-#  config:
-#    import: optional:configserver:http://localhost:8888
+  config:
+    import: configserver:http://localhost:8888

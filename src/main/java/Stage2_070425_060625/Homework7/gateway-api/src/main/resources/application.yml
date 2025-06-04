@@ -12,11 +12,23 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/users/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: userServiceCircuitBreaker
+                fallbackUri: forward:/fallback/users
 
         - id: notification-service
           uri: lb://notification-service
           predicates:
             - Path=/notifications/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: notificationServiceCircuitBreaker
+                fallbackUri: forward:/fallback/notifications
+  config:
+    import: configserver:http://localhost:8888
 
 #lb:// означает load balancer — Spring Cloud Gateway будет искать сервисы по имени в Eureka.
 #Что писать в Path=/users/**

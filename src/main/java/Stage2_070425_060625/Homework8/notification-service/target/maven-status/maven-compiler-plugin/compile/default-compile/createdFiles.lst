@@ -1,0 +1,7 @@
+org/aston/homework5NS/controller/EmailManualController.class
+org/aston/homework5NS/config/JavaSenderConfig.class
+org/aston/homework5NS/kafka/EmailConsumer.class
+org/aston/homework5NS/kafka/KafkaProducerService.class
+org/aston/homework5NS/config/KafkaConsumerConfig.class
+org/aston/homework5NS/ApplicationNS.class
+org/aston/homework5NS/service/EmailService.class
