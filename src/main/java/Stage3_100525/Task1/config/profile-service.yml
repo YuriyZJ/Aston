@@ -1,0 +1,22 @@
+# Работает с FeignClient, обращается к user-service
+server:
+  port: 8083
+
+spring:
+  application:
+    name: profile-service
+
+  config:
+    import: optional:configserver:http://config-server:8888
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka

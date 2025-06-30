@@ -1,0 +1,4 @@
+org/aston/laba1/profileservice/ProfileServiceApplication.class
+org/aston/laba1/profileservice/service/ProfileService.class
+org/aston/laba1/profileservice/client/UserClient.class
+org/aston/laba1/profileservice/controller/ProfileController.class
